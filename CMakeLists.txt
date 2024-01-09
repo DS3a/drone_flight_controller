@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(template_pkg_ros2)
+project(drone_flight_controller)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -15,6 +15,7 @@ find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(drone_controller_messages REQUIRED)
 
 ### NOTE if you want to add python libs add them here
 ament_python_install_package(python_lib)
